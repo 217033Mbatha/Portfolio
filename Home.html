@@ -1,0 +1,835 @@
+﻿
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Personal Portfolio</title>
+    
+</head>
+
+<body>
+
+    <header class="header-background">
+
+        <nav id="navbar">
+
+            <ul class="sidebar">
+
+                <li onclick="hidesidebar()"><a href="#"><i class="fa-sharp fa-solid fa-xmark"></i></a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#portfolio">Projects</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <ul>
+
+                <li class=""><a href="#">Mbatha.</a></li>
+
+                <li class="hideOnMobile"><a href="#about">About</a></li>
+
+                <li class="hideOnMobile"><a href="#portfolio">Projects</a></li>
+
+                <li class="hideOnMobile" ><a href="#contact">Contact</a></li>
+
+                <li class="menu-button" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+
+            </ul>   
+
+        </nav>
+
+        <div class="header-content">
+
+            <img src="https://imgur.com/kEtWsD7.png" alt="Profile Photo of Simphiwe" class="myphoto">
+
+            <h1>Hello world, my name is Simphiwe Mbatha</h1>
+
+            <p>Java Developer | Web Developer | Tech Enthusiast</p>
+
+        </div>
+
+        <div class="hireprocess">
+
+            <a href="Simphiwe_Mbatha_CV_Updated.pdf" download="Simphiwe-Mbatha-CV.pdf">
+                <button type="button" class="down">Download CV</button>
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="about">
+
+            <h2>~ About Me ~</h2>
+
+            <img src="https://imgur.com/MM67S2k.jpg" alt="Simphiwe's Profile" class="profile-photo">
+
+            <p class="personal">I am Simphiwe Mbatha, currently a Java Developer in the Advanced Technical Programme at FNB. I hold a Bachelor of Science degree in Computer Science and Information Technology from the University of KwaZulu-Natal, where I also pursued and earned my BCom Honours in Information Systems and Technology. I am passionate about leveraging technology to drive innovative solutions, with a solid foundation in both software development and IT systems.
+
+            <p class="PersonalSkills">I've a Web Developer solid background in both frontend and backend technologies. My journey in web development has equipped me with skills in HTML5, CSS3, TypeScript, Tailwind CSS, Vue3.js as the framework,. I am dedicated to creating efficient and user-friendly web applications, and I continuously seek opportunities to enhance my knowledge in emerging fields like Generative AI and Cloud Computing.I am committed to staying with FNB for the next five years, aspiring to become a senior team member who can mentor and guide new and entry-level developers within the organization.</p>
+            
+            <div class="tab-container">
+                <button class="tab-btn" onclick="activateTab(this, 'skills')">
+                    <p class="mr-3 font-semibold">Skills</p>
+                    <div class="tab-underline" id="skills-underline"></div>
+                </button>
+            
+                <button class="tab-btn" onclick="activateTab(this, 'education')">
+                    <p class="mr-3 font-semibold">Education</p>
+                    <div class="tab-underline" id="education-underline"></div>
+                </button>
+            
+                <button class="tab-btn" onclick="activateTab(this, 'certifications')">
+                    <p class="mr-3 font-semibold">Certifications</p>
+                    <div class="tab-underline" id="certifications-underline"></div>
+                </button>
+            </div>
+
+              <div id="skills" class="content-section active">
+                <ul>
+                    <li>HTML5</li>
+                    <li>Tailwind CSS and Bootstrap</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>C#.Net</li>
+                    <li>Vue3.js</li>
+                </ul>
+            </div>
+            
+            <div id="education" class="content-section">
+
+                <ul>
+
+                    <li>BSc in Computer Science and Information Technology, UKZN University.</li>
+
+                    <li> BCom Honours in Information Systems and Technology, UKZN University.</li>
+
+                </ul>
+
+            </div>
+              
+            <div id="certifications" class="content-section">
+
+                <ul>
+                    <li>Certified Web Developer.</li>
+
+                    <li> JavaScript Mastery Course.</li>
+                </ul>
+
+
+            </div>
+
+        </section>
+
+        <section id="Portfolio">
+
+            <h1 class="header"> ~ Projects ~</h1>
+            
+            <div class="Service-container">
+
+                <div class="box">
+
+                    <h1><span>Appointment Center System</span></h1>
+
+                    <p>For my final year project, I created a UKZN Appointment Centre system for the UKZN
+
+                        community using C# for backend, and HTML/CSS on the frontend, It was a group project, and my main responsibility was the backend development.
+
+                    </p>
+
+                        <img src="ukznphoto.png" alt="">
+                        
+                </div>
+                <div class="box">
+                    <h1><span>Technical Support</span></h1>
+                    <p>lorem ipusim pkejf jdhu
+                        dgd dgysdy hdgsygd 
+                        dhgdh hdgsyd hdgdg dhgdhsghgsdgshgdgf
+                        dsgdf dhsgd dhgdhsghgsdgshg</p>
+                        <img src="trade_link.png" alt="">
+                    
+                </div>
+                <div class="box">
+                    <h1><span>Web Developer</span></h1>
+                    <p>lorem ipusim pkejf jdhu
+                        dgd dgysdy hdgsygd 
+                        dhgdh hdgsyd hdgdg dhgdhsghgsdgshgdgf
+                        dsgdf dhsgd dhgdhsghgsdgshg</p>
+                        <img src="bpocapability.png" alt="">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+
+            <h2>~ Keep in Touch ~</h2>
+
+            <div class="form-container">
+
+                <form action="https://api.web3forms.com/submit"  method="POST" onsubmit="return validateForm()" class="Contact_input">
+
+                    <input type="hidden" name="access_key" value="55f39c8d-7260-465d-b45c-85d21dc5b1c5">
+
+                    <label for="email">Your email</label>
+
+                    <input type="email" id="email" name="email" placeholder="123@gmail.com"class="Contact_input" required>
+        
+                    <label for="subject">Subject</label>
+
+                    <input type="text" id="subject" name="subject" placeholder="Just saying hi!"class="Contact_input" required>
+        
+                    <label for="message">Message</label>
+
+                    <textarea id="message" name="message" placeholder="Let's talk about..." rows="4"class="Contact_input" required></textarea>
+        
+                    <button class="btn btn-default td-btn outline white" type="submit">
+
+                        Send me a message!
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <p id="successMessage" class="message">
+
+                You have successfully sent a message! <i class="fa-solid fa-circle-check"></i>
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="socials">
+            
+                <a href="https://www.linkedin.com/in/simphiwe-mbatha-193837187/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            	
+                <a href="https://github.com/217033Mbatha/Profile_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        
+        <p>Copyright © 2024 Simphiwe Mbatha — All Rights Reserved</p>
+
+    </footer>
+
+</body>
+
+</html>
+
+<style>
+    :root {
+        --primary-color: #29a598;
+        --text-color: #394c4a;
+        --background-light: #ffffff;
+        --header-height: 100vh;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 110%;
+    }
+
+
+    .down {
+        height: auto;
+        border-radius: 5px;
+        border: #000;
+        background-color: gray;
+    }
+
+    .down:hover {
+        background-color: #9251c8;;
+        border-radius: 5px;
+        color: white;
+    }
+    .personal {
+        text-align: left;
+    }
+
+    .PersonalSkills {
+        text-align: left;
+    }
+
+    .socials {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+        margin: 0;
+        display: flex; /* Flexbox for horizontal alignment */
+        justify-content: center; /* Center the icons horizontally */
+        gap: 50px; /* Spacing between the icons */
+    }
+    
+    .socials a {
+        text-decoration: none;
+        color: #000; /* Set icon color (default black) */
+        font-size: 24px; /* Adjust icon size */
+        transition: color 0.3s ease; /* Smooth transition for hover effect */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .socials a:hover {
+        
+        color: #0077b5; /* Change color on hover, example for LinkedIn color */
+        
+        animation: shake 0.5s;
+
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes shake {
+
+        30% { transform: translate(-1px, -2px) rotate(-1deg); }
+        
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Work Sans', Helvetica, sans-serif;
+        color: #394c4a;
+        line-height: 1.5;
+        overflow-x: hidden;
+    }
+
+    .header-background {
+        background: linear-gradient(rgba(255, 254, 253, 0.7), rgba(255, 254, 253, 0.9)), url("https://i.imgur.com/TAn6FWz.jpg") center center fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 1000; /* Ensures the navbar stays above other content */
+        padding: 15px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
+
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px 0;
+        
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Unica One', cursive;
+        font-size: 1.2rem;
+    }
+
+    nav li:first-child{
+        margin-right: auto;
+    }
+
+    .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color:rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(0px);
+        box-shadow: -10px 0px 10px rgba(246, 244, 244, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .menu-button{
+        display: none;
+    }
+    .myphoto {
+        max-width: 30%;
+        height: auto;
+        border-radius: 50%;
+        margin-top: 20px;
+    }
+
+    .header-content h1, .header-content p {
+        margin: 0.5rem 0;
+        font-family: 'Unica One', cursive;
+    }
+
+    #about {
+        background-color: #ffffff;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: 40px;
+        border-radius: 0.5%;
+        text-align:center;
+        
+    }
+
+    .about-buttons {
+        display: flex;
+        justify-content: flex-start;
+        margin: 20px 0;
+    }
+
+    .tab-btn {
+        margin-right: 15px;
+        padding: 10px 20px;
+        background-color: white;
+        color: black;
+        border: 10px;
+        border-radius: 5px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .tab-btn:hover {
+        background-color: #a45deb;
+        color: white;
+    }
+
+    .content-section {
+        /* display: none; Initially hide all sections */
+        margin-top: 20px;
+    }
+
+    .tab-container {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+
+    .tab-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+    }
+
+    .tab-btn p {
+        color: #ADB7BE;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .tab-btn:hover p, .tab-btn.active p {
+        color: white;
+    }
+
+    .tab-underline {
+        height: 4px;
+        background-color: var(--primary-color);
+        margin-top: 8px;
+        transition: width 0.3s ease-in-out;
+        width: 0; /* Default is no underline */
+    }
+
+    .tab-btn:hover .tab-underline, .tab-btn.active .tab-underline {
+        width: 100%; /* Underline fills full width on hover or active */
+    }
+
+    /* Style for the hidden sections */
+    .content-section {
+        display: none;
+    }
+
+    .content-section.active {
+        display: block;
+    }
+    #skills {
+        padding-left: 15px; /* Indent the section content */
+        margin-left: 10px; /* Align it with the Skills button */
+    }
+
+    /* .content-section.active {
+        display: block; 
+    } */
+
+
+    .content-section ul {
+        list-style-position: inside; /* This keeps the bullet points aligned with the text */
+        padding-left: 20px; /* Add indentation from the left */
+        text-align: left; /* Align text to the left */
+        margin-left: 0;  /* Ensure there's no additional margin */
+    }
+
+    .content-section li {
+        margin-bottom: 8px; /* Adds spacing between the list items */
+        padding-left: 10px; /* Adds spacing between the list items */
+    }
+
+    .profile-photo {
+        max-width: 30%;
+        height: auto;
+        border-radius: 50%;
+        
+    }
+
+    .profile-photo:hover {
+        max-width: 30%;
+        height: auto;
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes shake {
+        30% { transform: translate(-1px, -2px) rotate(-1deg); }
+    }
+
+    #portfolio {
+        background-color: #0fbfbf;
+        padding: 15px;
+        border-radius: 0.5%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+       
+    .Service-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: 2em;
+        background-color: #0fbfbf;
+    }
+    .box{
+        border: 3px solid rgb(49,49,49);
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        object-fit: cover;
+        padding: 3em;
+        gap: 2em;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .box:hover{
+        border: 3px solid rgb(100,100,100);
+    }
+    .box p{
+        opacity: 0.8;
+    }
+    .box h1{
+        font-size: 2em;
+    }
+    .box img{
+        min-width: 20px;
+        border-radius: 0.5em;
+    }
+
+    .project {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        margin: 10px;
+        display: inline-block;
+        line-height: 200px;
+    }
+
+    #contact {
+        background-color: #ffbc4b;
+        padding: 15px;
+        border-radius: 0.5%;
+        text-align: center;
+    }
+
+    .td-btn {
+        padding: 12px 36px;
+        text-transform: uppercase;
+        transition: background-color 0.2s ease-in-out;
+        background-color: #0fbfbf;
+        margin-top: 15px;
+    }
+    .td-btn:hover{
+        background:#a45deb;
+    }
+    footer {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 10px;
+        
+    }
+
+    h2 {
+        color: #333;
+        font-family: 'Unica One', cursive;
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    a {
+        color: #29a598;
+        transition: color 0.2s ease-in-out;
+    }
+
+    a:hover {
+        color: #208479;
+    }
+
+    @media (max-width: 768px) {
+        nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .menu-button{
+            display: block;
+        }
+
+        .hideOnMobile{
+            display: none;
+        }
+
+        .profile-photo {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .myphoto {
+           width: 50%;
+           margin: 0 auto;
+        }
+
+        
+    }
+
+    @media (max-width:768px) {
+        .sidebar{
+            display: none;
+        }
+    }
+
+    #contact {
+        padding: 50px 20px;
+        background-color: #ffbc4b;
+    }
+
+    #contact h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+        input::placeholder, textarea::placeholder {
+            color: #888;
+        }
+
+    button {
+        background-color: #a45deb;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #9251c8;
+    }
+
+    .message{
+        display: none; 
+        color: green; 
+        font-weight: bold; 
+        margin-top: 10px;
+    }
+</style>
+
+<Script>
+
+    
+    function showsidebar(){
+
+        const sidebar = document.querySelector('.sidebar')
+
+        sidebar.style.display = 'flex'
+        
+    }
+
+    function hidesidebar(){
+
+        const sidebar = document.querySelector('.sidebar')
+        
+        sidebar.style.display = 'none'
+        
+    }
+
+    function hideSidebarOnLinkClick() {
+
+        const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+        sidebarLinks.forEach(link => {
+            
+            link.addEventListener('click', () => {
+
+                const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+                
+                if (viewportWidth < 768) {
+
+                    hidesidebar();
+
+                }
+            });
+        });
+    }
+
+
+    document.addEventListener('DOMContentLoaded', hideSidebarOnLinkClick);
+
+    function checkScreenWidth() {
+
+        window.addEventListener('resize', () => {
+
+            const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+            if (viewportWidth >= 400) {
+
+                hidesidebar();
+
+            }
+
+        });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+
+        hideSidebarOnLinkClick();
+
+        checkScreenWidth();
+
+    });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+        showSection('skills');
+
+    });
+
+    function activateTab(btn, sectionId) {
+
+        const buttons = document.querySelectorAll('.tab-btn');
+
+        buttons.forEach(button => button.classList.remove('active'));
+        
+        const sections = document.querySelectorAll('.content-section');
+
+        sections.forEach(section => section.classList.remove('active'));
+        
+        btn.classList.add('active');
+
+        document.getElementById(sectionId).classList.add('active');
+    }
+
+    function validateForm() {
+
+    const email = document.getElementById("email").value;
+
+    const subject = document.getElementById("subject").value;
+
+    const message = document.getElementById("message").value;
+
+    
+    if (email !== "" && subject !== "" && message !== "") {
+
+        const successMessage = document.getElementById("successMessage");
+
+        successMessage.style.display = "block";
+
+        setTimeout(() => {
+
+            successMessage.style.display = "none";
+
+        }, 2000);
+
+        document.getElementById("contactForm").reset();
+
+        return false; 
+
+    } else {
+        
+        alert("Please fill in all fields.");
+
+        return false; 
+    }
+}
+</Script>
