@@ -233,12 +233,13 @@
         <div class="chatbot-icon" onmouseover="changeIcon(true)" onmouseout="changeIcon(false)" onclick="toggleChatbot()">
             <i class="fas fa-comments" id="chatbotIcon"></i>
         </div>
-        <input type="color" id="backgroundColorPicker" value="#ffffff" style="position: fixed; top: 80px; right: 20px;">
+       
         <div class="chatbot-window" id="chatbotWindow">
             <div class="chatbot-header">
                 <h4>Chat with Simphiwe's Assistant</h4>
                 <button class="close-btn" onclick="toggleChatbot()">&times;</button>
             </div>
+        
             <div class="chatbot-messages" id="chatMessages">
                 <div class="message bot-message">Hello! How can I help you today?</div>
             </div>
@@ -247,7 +248,7 @@
                 <button onclick="sendMessage(event)">Send</button>
             </div>
         </div>
-        
+        <script src="//code.tidio.co/8ne85y946pqrltuyntdjaxfpbmayjs5s.js" async></script>
     </body>
 
     </html>
@@ -725,13 +726,132 @@
             background-color: #9251c8;
         }
 
-        .message{
-            display: none; 
-            color: green; 
-            font-weight: bold; 
-            margin-top: 10px;
-        }
-    </style>
+    .message{
+        display: none; 
+        color: green; 
+        font-weight: bold; 
+        margin-top: 10px;
+    }
+
+    .chatbot-window {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 300px; /* Default width */
+        max-width: 90vw; /* Ensure it does not exceed 90% of viewport width */
+        height: 400px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        display: none;
+        flex-direction: column;
+    }
+
+    .chatbot-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        cursor: pointer;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s;
+    }
+
+    .chatbot-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .chatbot-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        background-color: #f7f7f7;
+    }
+
+    .message {
+        padding: 8px 12px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        max-width: 80%;
+        word-wrap: break-word;
+    }
+
+    .bot-message {
+        background-color: #007bff;
+        color: white;
+        align-self: flex-start;
+    }
+
+    .user-message {
+        background-color: #eee;
+        align-self: flex-end;
+    }
+
+    .chatbot-input {
+        display: flex;
+        padding: 10px;
+        background-color: #f7f7f7;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .chatbot-input input {
+        flex: 1;
+        padding: 8px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    .chatbot-input button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 12px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .chatbot-icon:hover {
+        background-color: #0056b3;
+    }
+
+    /* Add transition for icon change */
+    .edit-icon {
+        display: none;
+    }
+
+    .chatbot-icon:hover .edit-icon {
+        display: inline;
+    }
+
+    .chatbot-icon:hover .default-icon {
+        display: none;
+    }
+</style>
 
     <Script>
 
@@ -847,4 +967,47 @@
             return false; 
         }
     }
-    </Script>
+
+    function changeIcon(isHover) { 
+        const icon = document.getElementById('chatbotIcon');
+        if (isHover) {
+            icon.classList.remove('fa-comments');
+            icon.classList.add('fa-pen-to-square');
+        } else {
+            icon.classList.remove('fa-pen-to-square');
+            icon.classList.add('fa-comments');
+        }
+    }
+
+    function toggleChatbot() {
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        chatbotWindow.style.display = chatbotWindow.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function sendMessage(event) {
+        if (event.type === 'keypress' && event.key !== 'Enter') return;
+
+        const userInput = document.getElementById('userInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        if (userInput.value.trim()) {
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user-message');
+            userMessage.textContent = userInput.value;
+            chatMessages.appendChild(userMessage);
+            
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('message', 'bot-message');
+            botMessage.textContent = "Hello! How can I assist you today?";
+            chatMessages.appendChild(botMessage);
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            userInput.value = '';
+        }
+    }
+    
+    document.getElementById('backgroundColorPicker').addEventListener('input', function(event) {
+        document.body.style.backgroundColor = event.target.value;
+        document.getElementById('chatbotWindow').style.backgroundColor = event.target.value; // Change the chatbot window background color
+    });
+</Script>
