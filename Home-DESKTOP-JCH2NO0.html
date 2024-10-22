@@ -734,6 +734,7 @@
     }
 
     .chatbot-window {
+        display: none;      
         position: fixed;
         bottom: 80px;
         right: 20px;
@@ -762,8 +763,19 @@
         font-size: 30px;
         cursor: pointer;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.5s;
+        transition: background-color 0.3s;
     }
+
+    .edit-text {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            font-size: 1rem;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
     .chatbot-header {
         background-color: #007bff;
@@ -785,10 +797,11 @@
     }
 
     .chatbot-messages {
-        flex: 1;
+        
         padding: 10px;
+        height: 200px;
         overflow-y: auto;
-        background-color: #f7f7f7;
+        background-color: #807474;
     }
 
     .message {
@@ -797,6 +810,7 @@
         margin-bottom: 10px;
         max-width: 80%;
         word-wrap: break-word;
+        color: red;
     }
 
     .bot-message {
@@ -836,12 +850,21 @@
         cursor: pointer;
     }
     .chatbot-icon:hover {
-        background-color: #0056b3;
+        background-color: #9251c8;
     }
 
     /* Add transition for icon change */
     .edit-icon {
         display: none;
+        position: absolute;
+        bottom: 60px; /* Position it above the icon */
+        right: 20px;
+        font-size: 1rem;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
     }
 
     .chatbot-icon:hover .edit-icon {
@@ -967,15 +990,25 @@
             return false; 
         }
     }
+    let editTextElement;
 
     function changeIcon(isHover) { 
         const icon = document.getElementById('chatbotIcon');
         if (isHover) {
             icon.classList.remove('fa-comments');
             icon.classList.add('fa-pen-to-square');
+            editTextElement = document.createElement('div');
+            editTextElement.classList.add('edit-icon');
+            editTextElement.textContent = 'Click to chat!';
+            document.body.appendChild(editTextElement);
         } else {
             icon.classList.remove('fa-pen-to-square');
             icon.classList.add('fa-comments');
+            
+            if (editTextElement) {
+                document.body.removeChild(editTextElement);
+                
+            }
         }
     }
 
