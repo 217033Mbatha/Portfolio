@@ -230,6 +230,27 @@
 
         </footer>
 
+        <div class="chatbot-icon" onclick="toggleChatbot()">
+            <i class="fas fa-comments"></i>
+        </div>
+    
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h4>Chat with Simphiwe's Assistant</h4>
+                <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatMessages">
+                
+                <div class="message bot-message">Hello! How can I help you today?</div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="userInput" placeholder="Type a message..." onkeypress="sendMessage(event)">
+                <button onclick="sendMessage(event)">Send</button>
+            </div>
+        </div>
+    
+        <script src="//code.tidio.co/8ne85y946pqrltuyntdjaxfpbmayjs5s.js" async></script>
+    
     </body>
 
     </html>
@@ -587,9 +608,7 @@
             background-color: #0fbfbf;
             margin-top: 15px;
         }
-        /* .td-btn:hover{
-            background:#a45deb;
-        } */
+   
         footer {
             background-color: #f4f4f4;
             text-align: center;
@@ -659,6 +678,10 @@
             .sidebar {
                 display: none;
             }
+            .chatbot-window {
+                width: 90%;
+                height: 80%; 
+            }
         }
 
         #contact {
@@ -691,11 +714,11 @@
             font-size: 1rem;
         }
 
-            input::placeholder, textarea::placeholder {
-                color: #888;
-            }
+        input::placeholder, textarea::placeholder {
+            color: #888;
+        }
 
-            .td-Messagebtn {
+        .td-Messagebtn {
             background-color: #29a598;
             color: #fff;
             padding: 10px 20px;
@@ -714,6 +737,117 @@
             color: green; 
             font-weight: bold; 
             margin-top: 10px;
+        }
+
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        
+        .chatbot-window {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+        }
+
+        .chatbot-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .chatbot-icon:hover {
+            background-color: #0056b3;
+        }
+
+        .chatbot-icon:hover i {
+            content: "fa-solid fa-pen-to-square";
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #f7f7f7;
+        }
+
+        .message {
+            padding: 8px 12px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .bot-message {
+            background-color: #007bff;
+            color: white;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background-color: #eee;
+            align-self: flex-end;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .chatbot-input button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 12px;
+            margin-left: 10px;
+            cursor: pointer;
         }
     </style>
 
@@ -780,7 +914,7 @@
 
         });
 
-            document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
                 
             showSection('skills');
 
@@ -801,34 +935,66 @@
 
         function validateForm() {
 
-        const email = document.getElementById("email").value;
+            const email = document.getElementById("email").value;
 
-        const subject = document.getElementById("subject").value;
+            const subject = document.getElementById("subject").value;
 
-        const message = document.getElementById("message").value;
+            const message = document.getElementById("message").value;
 
         
-        if (email !== "" && subject !== "" && message !== "") {
+            if (email !== "" && subject !== "" && message !== "") {
 
-            const successMessage = document.getElementById("successMessage");
+                const successMessage = document.getElementById("successMessage");
 
-            successMessage.style.display = "block";
+                successMessage.style.display = "block";
 
-            setTimeout(() => {
+                setTimeout(() => {
 
-                successMessage.style.display = "none";
+                    successMessage.style.display = "none";
 
-            }, 2000);
+                }, 2000);
 
-            document.getElementById("contactForm").reset();
+                document.getElementById("contactForm").reset();
 
-            return false; 
+                return false; 
 
-        } else {
+            } else {
             
             alert("Please fill in all fields.");
 
             return false; 
         }
     }
-    </Script>
+
+    function toggleChatbot() {
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        chatbotWindow.style.display = chatbotWindow.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function sendMessage(event) {
+        if (event.type === 'keypress' && event.key !== 'Enter') return;
+
+        const userInput = document.getElementById('userInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        if (userInput.value.trim()) {
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user-message');
+            userMessage.textContent = userInput.value;
+            chatMessages.appendChild(userMessage);
+            
+            const botMessage = document.createElement('div');
+            botMessage.classList.add('message', 'bot-message');
+            botMessage.textContent = "Hello! How can I assist you today?";
+            chatMessages.appendChild(botMessage);
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            userInput.value = '';
+        }
+    }
+
+    document.getElementById('backgroundColorPicker').addEventListener('input', function(event) {
+        document.body.style.backgroundColor = event.target.value;
+    });
+    
+</Script>
