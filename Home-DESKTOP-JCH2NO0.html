@@ -230,7 +230,24 @@
             <p>Copyright © 2024 Simphiwe Mbatha — All Rights Reserved</p>
 
         </footer>
-
+        <div class="chatbot-icon" onmouseover="changeIcon(true)" onmouseout="changeIcon(false)" onclick="toggleChatbot()">
+            <i class="fas fa-comments" id="chatbotIcon"></i>
+        </div>
+        <input type="color" id="backgroundColorPicker" value="#ffffff" style="position: fixed; top: 80px; right: 20px;">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h4>Chat with Simphiwe's Assistant</h4>
+                <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="message bot-message">Hello! How can I help you today?</div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="userInput" placeholder="Type a message..." onkeypress="sendMessage(event)">
+                <button onclick="sendMessage(event)">Send</button>
+            </div>
+        </div>
+        
     </body>
 
     </html>
