@@ -1,834 +1,1046 @@
 ﻿
-    <html lang="en">
+<html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        <title>Personal Portfolio</title>
-        
-    </head>
+    <title>Personal Portfolio</title>
+    
+</head>
 
-    <body>
+<body>
 
-        <header class="header-background">
+    <header class="header-background">
 
-            <nav id="navbar">
+        <nav id="navbar">
 
-                <ul class="sidebar">
+            <ul class="sidebar">
 
-                    <li onclick="hidesidebar()"><a href="#"><i class="fa-sharp fa-solid fa-xmark"></i></a></li>
+                <li onclick="hidesidebar()"><a href="#"><i class="fa-sharp fa-solid fa-xmark"></i></a></li>
 
-                    <li><a href="#about">About</a></li>
+                <li><a href="#about">About</a></li>
 
-                    <li><a href="#Portfolio">Projects</a></li>
+                <li><a href="#Portfolio">Projects</a></li>
 
-                    <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
 
+            </ul>
+
+            <ul>
+
+                <li class=""><a href="#">Mbatha.</a></li>
+
+                <li class="hideOnMobile"><a href="#about">About</a></li>
+
+                <li class="hideOnMobile"><a href="#Portfolio">Projects</a></li>
+
+                <li class="hideOnMobile" ><a href="#contact">Contact</a></li>
+
+                <li class="menu-button" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+
+            </ul>   
+
+        </nav>
+
+        <div class="header-content">
+
+            <img src="https://imgur.com/kEtWsD7.png" alt="Profile Photo of Simphiwe" class="myphoto">
+
+            <h1>Hello world, my name is Simphiwe Mbatha</h1>
+
+            <p>Java Developer | Web Developer | Tech Enthusiast</p>
+
+        </div>
+
+        <div class="hireprocess">
+
+            <a href="Simphiwe_Mbatha_CV_Updated.pdf" download="Simphiwe-Mbatha-CV.pdf">
+                <button type="button" class="down">Download CV</button>
+            </a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="about">
+
+            <h2>~ About Me ~</h2>
+
+            <img src="https://imgur.com/MM67S2k.jpg" alt="Simphiwe's Profile" class="profile-photo">
+
+            <p class="personal">I am Simphiwe Mbatha, currently a Java Developer in the Advanced Technical Programme at FNB. I hold a Bachelor of Science degree in Computer Science and Information Technology from the University of KwaZulu-Natal, where I also pursued and earned my BCom Honours in Information Systems and Technology. I am passionate about leveraging technology to drive innovative solutions, with a solid foundation in both software development and IT systems.
+
+            <p class="PersonalSkills">I've a Web Developer solid background in both frontend and backend technologies. My journey in web development has equipped me with skills in <b> HTML5, CSS3, TypeScript, Tailwind CSS, Vue3.js </b> as the framework,. I am dedicated to creating efficient and user-friendly web applications, and I continuously seek opportunities to enhance my knowledge in emerging fields like Generative AI and Cloud Computing.I am committed to staying with FNB for the next five years, aspiring to become a senior team member who can mentor and guide new and entry-level developers within the organization.</p>
+            
+            <div class="tab-container">
+                <button class="tab-btn" onclick="activateTab(this, 'skills')">
+                    <p class="mr-3 font-semibold">Skills</p>
+                    <div class="tab-underline" id="skills-underline"></div>
+                </button>
+            
+                <button class="tab-btn" onclick="activateTab(this, 'education')">
+                    <p class="mr-3 font-semibold">Education</p>
+                    <div class="tab-underline" id="education-underline"></div>
+                </button>
+            
+                <button class="tab-btn" onclick="activateTab(this, 'certifications')">
+                    <p class="mr-3 font-semibold">Certifications</p>
+                    <div class="tab-underline" id="certifications-underline"></div>
+                </button>
+            </div>
+
+            <div id="skills" class="content-section active">
+                <ul>
+                    <li>HTML5</li>
+                    <li>Tailwind CSS and Bootstrap</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>C#.Net</li>
+                    <li>Vue3.js</li>
                 </ul>
+            </div>
+            
+            <div id="education" class="content-section">
 
                 <ul>
 
-                    <li class=""><a href="#">Mbatha.</a></li>
+                    <li>BSc in Computer Science and Information Technology, UKZN University.</li>
 
-                    <li class="hideOnMobile"><a href="#about">About</a></li>
+                    <li> BCom Honours in Information Systems and Technology, UKZN University.</li>
 
-                    <li class="hideOnMobile"><a href="#Portfolio">Projects</a></li>
+                </ul>
 
-                    <li class="hideOnMobile" ><a href="#contact">Contact</a></li>
+            </div>
+            
+            <div id="certifications" class="content-section">
 
-                    <li class="menu-button" onclick="showsidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                <ul>
+                    <li>Certified Web Developer.</li>
 
-                </ul>   
+                    <li> JavaScript Mastery Course.</li>
+                </ul>
 
-            </nav>
-
-            <div class="header-content">
-
-                <img src="https://imgur.com/kEtWsD7.png" alt="Profile Photo of Simphiwe" class="myphoto">
-
-                <h1>Hello world, my name is Simphiwe Mbatha</h1>
-
-                <p>Java Developer | Web Developer | Tech Enthusiast</p>
 
             </div>
 
-            <div class="hireprocess">
+        </section>
 
-                <a href="Simphiwe_Mbatha_CV_Updated.pdf" download="Simphiwe-Mbatha-CV.pdf">
-                    <button type="button" class="down">Download CV</button>
-                </a>
+        <section id="Portfolio">
 
-            </div>
+            <h1 class="header"> ~ Projects ~</h1>
+            
+            <div class="Service-container">
 
-        </header>
+                <div class="box">
 
-        <main>
+                    <h1><span>Appointment Center System</span></h1>
 
-            <section id="about">
+                    <p>For my final year project, I created a UKZN Appointment Centre system for the UKZN
 
-                <h2>~ About Me ~</h2>
+                        community using C# for backend, and HTML/CSS on the frontend, It was a group project, and my main responsibility was the backend development.
 
-                <img src="https://imgur.com/MM67S2k.jpg" alt="Simphiwe's Profile" class="profile-photo">
+                    </p>
 
-                <p class="personal">I am Simphiwe Mbatha, currently a Java Developer in the Advanced Technical Programme at FNB. I hold a Bachelor of Science degree in Computer Science and Information Technology from the University of KwaZulu-Natal, where I also pursued and earned my BCom Honours in Information Systems and Technology. I am passionate about leveraging technology to drive innovative solutions, with a solid foundation in both software development and IT systems.
-
-                <p class="PersonalSkills">I've a Web Developer solid background in both frontend and backend technologies. My journey in web development has equipped me with skills in <b> HTML5, CSS3, TypeScript, Tailwind CSS, Vue3.js </b> as the framework,. I am dedicated to creating efficient and user-friendly web applications, and I continuously seek opportunities to enhance my knowledge in emerging fields like Generative AI and Cloud Computing.I am committed to staying with FNB for the next five years, aspiring to become a senior team member who can mentor and guide new and entry-level developers within the organization.</p>
-                
-                <div class="tab-container">
-                    <button class="tab-btn" onclick="activateTab(this, 'skills')">
-                        <p class="mr-3 font-semibold">Skills</p>
-                        <div class="tab-underline" id="skills-underline"></div>
-                    </button>
-                
-                    <button class="tab-btn" onclick="activateTab(this, 'education')">
-                        <p class="mr-3 font-semibold">Education</p>
-                        <div class="tab-underline" id="education-underline"></div>
-                    </button>
-                
-                    <button class="tab-btn" onclick="activateTab(this, 'certifications')">
-                        <p class="mr-3 font-semibold">Certifications</p>
-                        <div class="tab-underline" id="certifications-underline"></div>
-                    </button>
-                </div>
-
-                <div id="skills" class="content-section active">
-                    <ul>
-                        <li>HTML5</li>
-                        <li>Tailwind CSS and Bootstrap</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>C#</li>
-                        <li>Vue3.js</li>
-                    </ul>
-                </div>
-                
-                <div id="education" class="content-section">
-
-                    <ul>
-
-                        <li>BSc in Computer Science and Information Technology, UKZN University.</li>
-
-                        <li> BCom Honours in Information Systems and Technology, UKZN University.</li>
-
-                    </ul>
-
-                </div>
-                
-                <div id="certifications" class="content-section">
-
-                    <ul>
-                        <li>Certified Web Developer.</li>
-
-                        <li> JavaScript Mastery Course.</li>
-                    </ul>
-
-
-                </div>
-
-            </section>
-
-            <section id="Portfolio">
-
-                <h1 class="header"> ~ Projects ~</h1>
-                
-                <div class="Service-container">
-
-                    <div class="box">
-
-                        <h1><span>Appointment Center System</span></h1>
-
-                        <p>For Honours project, I created a UKZN Appointment Centre system for the UKZN
-
-                            community using C# for backend, and HTML/CSS on the frontend, It was a group project, and my main responsibility was the backend development.
-
-                        </p>
-
-                            <img src="ukznphoto.png" alt="">
-                            
-                    </div>
-                    <div class="box">
-                        <h1><span>Junior Technical Support</span></h1>
-                        <p>I had the opportunity to contribute to the development of a Career Role Opportunity System. 
-                            The project involved using technologies such as <b> HTML, SQLite, Vue.js, Bootstrap, and CSS </b>, where I specialized in backend development. 
-                        </p>
-                            <img src="trade_link.png" alt="">
+                        <img src="ukznphoto.png" alt="">
                         
-                    </div>
-                    <div class="box">
-                        <h1><span>Web Developer</span></h1>
-                        <p>I specialized in developing the Ticketing Log Management System using a diverse set of technologies, including HTML, SQLite, Vue.js, Bootstrap, and CSS.
-                            My role focused on building and maintaining responsive web applications, ensuring a seamless user experience through effective front-end development and dynamic interfaces. 
-                            </p>
-                            <img src="bpocapability.png" alt="">
-                        
-                    </div>
                 </div>
-            </section>
-
-            <section id="contact">
-
-                <h2>~ Keep in Touch ~</h2>
-
-                <div class="form-container">
-
-                    <form action="https://api.web3forms.com/submit"  method="POST" onsubmit="return validateForm()" class="Contact_input">
-
-                        <input type="hidden" name="access_key" value="55f39c8d-7260-465d-b45c-85d21dc5b1c5">
-
-                        <label for="email">Your email</label>
-
-                        <input type="email" id="email" name="email" placeholder="123@gmail.com"class="Contact_input" required>
-            
-                        <label for="subject">Subject</label>
-
-                        <input type="text" id="subject" name="subject" placeholder="Just saying hi!"class="Contact_input" required>
-            
-                        <label for="message">Message</label>
-
-                        <textarea id="message" name="message" placeholder="Let's talk about..." rows="4"class="Contact_input" required></textarea>
-            
-                        <button class="btn btn-default td-Messagebtn outline white" type="submit">
-
-                            Send me a message!
-
-                        </button>
-
-                    </form>
-
-                </div>
-
-                <p id="successMessage" class="message">
-
-                    You have successfully sent a message! <i class="fa-solid fa-circle-check"></i>
-
-                </p>
-
-            </section>
-
-        </main>
-
-        <footer>
-            <div class="socials">
-                
-                    <a href="https://www.linkedin.com/in/simphiwe-mbatha-193837187/" target="_blank"><i class="fab fa-linkedin"></i></a>
-
-                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                
-                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-
-                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <div class="box">
+                    <h1><span>Technical Support</span></h1>
+                    <p>my primary responsibilities included maintaining hardware, software, and network systems by troubleshooting issues related to computers, servers, and printers, as well as running software updates and handling backup requests. 
+                        In addition to these duties, I had the opportunity to contribute to the development of a Career Role Opportunity System. 
+                        The project involved using technologies such as HTML, SQLite, Vue.js, Bootstrap, and CSS, where I specialized in backend development. 
+                    </p>
+                        <img src="trade_link.png" alt="">
                     
-                    <a href="https://github.com/217033Mbatha" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="box">
+                    <h1><span>Web Developer</span></h1>
+                    <p>I specialized in developing the Ticketing Log Management System using a diverse set of technologies, including HTML, SQLite, Vue.js, Bootstrap, and CSS.
+                        My role focused on building and maintaining responsive web applications, ensuring a seamless user experience through effective front-end development and dynamic interfaces. 
+                        I was responsible for managing databases with SQLite, writing SQL queries to ensure data integrity, and optimizing application performance.</p>
+                        <img src="bpocapability.png" alt="">
+                    
+                </div>
             </div>
-            
-            <p>Copyright © 2024 Simphiwe Mbatha — All Rights Reserved</p>
+        </section>
 
-        </footer>
+        <section id="contact">
 
-    </body>
+            <h2>~ Keep in Touch ~</h2>
 
-    </html>
+            <div class="form-container">
 
-    <style>
-        :root {
-            --primary-color: #29a598;
-            --text-color: #394c4a;
-            --background-light: #ffffff;
-            --header-height: 100vh;
-        }
+                <form action="https://api.web3forms.com/submit"  method="POST" onsubmit="return validateForm()" class="Contact_input">
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+                    <input type="hidden" name="access_key" value="55f39c8d-7260-465d-b45c-85d21dc5b1c5">
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 110%;
-        }
+                    <label for="email">Your email</label>
 
-
-        .down {
-            height: 30px;
-            border-radius: 5px;
-            border: #000;
-            background-color: gray;
-        }
-
-        .down:hover {
-            background-color: #9251c8;
-            border-radius: 5px;
-            color: white;
-        }
-        .personal {
-            text-align: left;
-        }
-
-        .PersonalSkills {
-            text-align: left;
-        }
-
-        .socials {
-            list-style-type: none; 
-            padding: 0;
-            margin: 0;
-            display: flex; 
-            justify-content: center; 
-            gap: 50px;
-        }
+                    <input type="email" id="email" name="email" placeholder="123@gmail.com"class="Contact_input" required>
         
-        .socials a {
-            text-decoration: none;
-            color: #000; 
-            font-size: 24px; 
-            transition: color 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-        }
+                    <label for="subject">Subject</label>
 
-        .socials a:hover {
-            
-            color: #0077b5; 
-            
-            animation: shake 0.5s;
-
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes shake {
-
-            30% { transform: translate(-1px, -2px) rotate(-1deg); }
-            
-        }
+                    <input type="text" id="subject" name="subject" placeholder="Just saying hi!"class="Contact_input" required>
         
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Work Sans', Helvetica, sans-serif;
-            color: #394c4a;
-            line-height: 1.5;
-            overflow-x: hidden;
-        }
+                    <label for="message">Message</label>
 
-        .header-background {
-            background: linear-gradient(rgba(255, 254, 253, 0.7), rgba(255, 254, 253, 0.9)), url("https://i.imgur.com/TAn6FWz.jpg") center center fixed;
-            background-size: cover;
-            background-repeat: no-repeat;
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+                    <textarea id="message" name="message" placeholder="Let's talk about..." rows="4"class="Contact_input" required></textarea>
+        
+                    <button class="btn btn-default td-btn outline white" type="submit">
 
-        #navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.5); 
-            z-index: 1000; 
-            padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-        }
+                        Send me a message!
 
-        nav {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px 0;
+                    </button>
+
+                </form>
+
+            </div>
+
+            <p id="successMessage" class="message">
+
+                You have successfully sent a message! <i class="fa-solid fa-circle-check"></i>
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="socials">
             
-        }
+                <a href="https://www.linkedin.com/in/simphiwe-mbatha-193837187/" target="_blank"><i class="fab fa-linkedin"></i></a>
 
-        nav ul {
-            list-style: none;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: flex-end;
-            text-align: center;
-        }
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
 
-        nav ul {
-            list-style: none;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: flex-end;
-            text-align: center;
-        }
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                
+                <a href="https://github.com/217033Mbatha/Profile_Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        
+        <p>Copyright © 2024 Simphiwe Mbatha — All Rights Reserved</p>
 
+    </footer>
+    <div class="chatbot-icon" onmouseover="changeIcon(true)" onmouseout="changeIcon(false)" onclick="toggleChatbot()">
+        <i class="fas fa-comments" id="chatbotIcon"></i>
+    </div>
+   
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h4>Chat with Simphiwe's Assistant</h4>
+            <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+        </div>
+    
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot-message">Hello! How can I help you today?</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="userInput" placeholder="Type a message..." onkeypress="sendMessage(event)">
+            <button onclick="sendMessage(event)">Send</button>
+        </div>
+    </div>
+    <script src="//code.tidio.co/8ne85y946pqrltuyntdjaxfpbmayjs5s.js" async></script>
+</body>
+
+</html>
+
+<style>
+    :root {
+        --primary-color: #29a598;
+        --text-color: #394c4a;
+        --background-light: #ffffff;
+        --header-height: 100vh;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-size: 110%;
+    }
+
+
+    .down {
+        height: auto;
+        border-radius: 5px;
+        border: #000;
+        background-color: gray;
+    }
+
+    .down:hover {
+        background-color: #9251c8;;
+        border-radius: 5px;
+        color: white;
+    }
+    .personal {
+        text-align: left;
+    }
+
+    .PersonalSkills {
+        text-align: left;
+    }
+
+    .socials {
+        list-style-type: none; 
+        padding: 0;
+        margin: 0;
+        display: flex; 
+        justify-content: center; 
+        gap: 50px;
+    }
+    
+    .socials a {
+        text-decoration: none;
+        color: #000; 
+        font-size: 24px; 
+        transition: color 0.3s ease;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .socials a:hover {
+        
+        color: #0077b5; 
+        
+        animation: shake 0.5s;
+
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes shake {
+
+        30% { transform: translate(-1px, -2px) rotate(-1deg); }
+        
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Work Sans', Helvetica, sans-serif;
+        color: #394c4a;
+        line-height: 1.5;
+        overflow-x: hidden;
+    }
+
+    .header-background {
+        background: linear-gradient(rgba(255, 254, 253, 0.7), rgba(255, 254, 253, 0.9)), url("https://i.imgur.com/TAn6FWz.jpg") center center fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 1000; /* Ensures the navbar stays above other content */
+        padding: 15px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
+
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px 0;
+        
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-family: 'Unica One', cursive;
+        font-size: 1.2rem;
+    }
+
+    nav li:first-child{
+        margin-right: auto;
+    }
+
+    .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color:rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(0px);
+        box-shadow: -10px 0px 10px rgba(246, 244, 244, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .menu-button{
+        display: none;
+    }
+    .myphoto {
+        max-width: 30%;
+        height: auto;
+        border-radius: 50%;
+        margin-top: 20px;
+    }
+
+    .header-content h1, .header-content p {
+        margin: 0.5rem 0;
+        font-family: 'Unica One', cursive;
+    }
+
+    #about {
+        background-color: #ffffff;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: 40px;
+        border-radius: 0.5%;
+        text-align:center;
+        
+    }
+
+    .about-buttons {
+        display: flex;
+        justify-content: flex-start;
+        margin: 20px 0;
+    }
+
+    .tab-btn {
+        margin-right: 15px;
+        padding: 10px 20px;
+        background-color: white;
+        color: black;
+        border: 10px;
+        border-radius: 5px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .tab-btn:hover {
+        color: gray;
+    }
+
+    .content-section {
+        margin-top: 20px;
+    }
+
+    .tab-container {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+
+    .tab-btn p {
+        color: #ADB7BE;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .tab-btn:hover p, .tab-btn.active p {
+        color: gray;
+    }
+
+    .tab-underline {
+        height: 4px;
+        background-color: var(--primary-color);
+        margin-top: 8px;
+        transition: width 0.3s ease-in-out;
+        width: 0; 
+    }
+
+    .tab-btn:hover .tab-underline, .tab-btn.active .tab-underline {
+        width: 100%;
+    }
+
+
+    .content-section {
+        display: none;
+    }
+
+    .content-section.active {
+        display: block;
+    }
+    #skills {
+        padding-left: 15px;
+        margin-left: 10px;
+    }
+
+    .content-section ul {
+        list-style-position: inside; 
+        padding-left: 20px; 
+        text-align: left; 
+        margin-left: 0;  
+    }
+
+    .content-section li {
+        margin-bottom: 8px; 
+        padding-left: 10px;
+    }
+
+    .profile-photo {
+        max-width: 30%;
+        height: auto;
+        border-radius: 50%;
+        
+    }
+
+    .profile-photo:hover {
+        max-width: 30%;
+        height: auto;
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes shake {
+        30% { transform: translate(-1px, -2px) rotate(-1deg); }
+    }
+
+    #portfolio {
+        background-color: #0fbfbf;
+        padding: 15px;
+        border-radius: 0.5%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    
+    .Service-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: 2em;
+        background-color: #0fbfbf;
+    }
+    .box{
+        border: 3px solid rgb(49,49,49);
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        object-fit: cover;
+        padding: 3em;
+        gap: 2em;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .box:hover{
+        border: 3px solid rgb(100,100,100);
+    }
+    .box p{
+        opacity: 0.8;
+    }
+    .box h1{
+        font-size: 2em;
+    }
+    .box img{
+        min-width: 20px;
+        border-radius: 0.5em;
+    }
+
+    .project {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        margin: 10px;
+        display: inline-block;
+        line-height: 200px;
+    }
+
+    #contact {
+        background-color: #ffbc4b;
+        padding: 15px;
+        border-radius: 0.5%;
+        text-align: center;
+    }
+
+    .td-btn {
+        padding: 12px 36px;
+        text-transform: uppercase;
+        transition: background-color 0.2s ease-in-out;
+        background-color: #0fbfbf;
+        margin-top: 15px;
+    }
+    .td-btn:hover{
+        background:#a45deb;
+    }
+    footer {
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 10px;
+        
+    }
+
+    h2 {
+        color: #333;
+        font-family: 'Unica One', cursive;
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    a {
+        color: #29a598;
+        transition: color 0.2s ease-in-out;
+    }
+
+    a:hover {
+        color: #208479;
+    }
+
+    @media (max-width: 768px) {
         nav ul li {
-            display: inline;
-            margin: 0 10px;
+            display: block;
+            margin: 10px 0;
         }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-family: 'Unica One', cursive;
-            font-size: 1.2rem;
-        }
-
-        nav li:first-child{
-            margin-right: auto;
-        }
-
-        .sidebar{
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            width: 250px;
-            z-index: 999;
-            background-color:rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(0px);
-            box-shadow: -10px 0px 10px rgba(246, 244, 244, 0.1);
-            display: none;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
-
-        .menu-button{
-            display: none;
-        }
-        .myphoto {
-            max-width: 30%;
-            height: auto;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-
-        .header-content h1, .header-content p {
-            margin: 0.5rem 0;
-            font-family: 'Unica One', cursive;
-        }
-
-        #about {
-            background-color: #ffffff;
-            padding-left: 40px;
-            padding-right: 40px;
-            margin: 40px;
-            border-radius: 0.5%;
-            text-align:center;
-            
-        }
-
-        .about-buttons {
-            display: flex;
-            justify-content: flex-start;
-            margin: 20px 0;
-        }
-
-        .tab-btn {
-            margin-right: 15px;
-            padding: 10px 20px;
-            background-color: white;
-            color: black;
-            border: 10px;
-            border-radius: 5px;
-            font-size: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .tab-btn:hover {
-            color: gray;
-        }
-
-        .content-section {
-            margin-top: 20px;
-        }
-
-        .tab-container {
-            display: flex;
-            justify-content: flex-start;
-            gap: 1.5rem;
-        }
-
-        .tab-btn p {
-            color: #ADB7BE;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .tab-btn:hover p, .tab-btn.active p {
-            color: gray;
-        }
-
-        .tab-underline {
-            height: 4px;
-            background-color: var(--primary-color);
-            margin-top: 8px;
-            transition: width 0.3s ease-in-out;
-            width: 0; 
-        }
-
-        .tab-btn:hover .tab-underline, .tab-btn.active .tab-underline {
-            width: 100%;
-        }
-
-  
-        .content-section {
-            display: none;
-        }
-
-        .content-section.active {
+        .menu-button {
             display: block;
         }
-        #skills {
-            padding-left: 15px;
-            margin-left: 10px;
-        }
 
-        .content-section ul {
-            list-style-position: inside; 
-            padding-left: 20px; 
-            text-align: left; 
-            margin-left: 0;  
-        }
-
-        .content-section li {
-            margin-bottom: 8px; 
-            padding-left: 10px;
+        .hideOnMobile {
+            display: none;
         }
 
         .profile-photo {
-            max-width: 30%;
-            height: auto;
-            border-radius: 50%;
-            
-        }
-
-        .profile-photo:hover {
-            max-width: 30%;
-            height: auto;
-            animation: shake 0.5s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes shake {
-            30% { transform: translate(-1px, -2px) rotate(-1deg); }
-        }
-
-        #portfolio {
-            background-color: #0fbfbf;
-            padding: 15px;
-            border-radius: 0.5%;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        
-        .Service-container{
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-            gap: 2em;
-            background-color: #0fbfbf;
-        }
-        .box{
-            border: 3px solid rgb(32, 123, 226);
-            border-radius: 0.5em;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            text-align: justify;
-            overflow: hidden;
-            object-fit: cover;
-            padding: 3em;
-            gap: 2em;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s ease-in-out;
-        }
-        .box:hover{
-            border: 3px solid rgb(100,100,100);
-        }
-        .box p{
-            opacity: 0.8;
-
-        }
-        .box h1{
-            font-size: 2em;
-        }
-        .box img{
-            min-width: 20px;
-            border-radius: 0.5em;
-        }
-
-        .project {
-            width: 200px;
-            height: 200px;
-            border: 1px solid #ccc;
-            margin: 10px;
-            display: inline-block;
-            line-height: 200px;
-        }
-
-        #contact {
-            background-color: #ffbc4b;
-            padding: 15px;
-            border-radius: 0.5%;
-            text-align: center;
-        }
-
-        .td-btn {
-            padding: 12px 36px;
-            text-transform: uppercase;
-            transition: background-color 0.2s ease-in-out;
-            background-color: #0fbfbf;
-            margin-top: 15px;
-        }
-        /* .td-btn:hover{
-            background:#a45deb;
-        } */
-        footer {
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 10px;
-            
-        }
-
-        h2 {
-            color: #333;
-            font-family: 'Unica One', cursive;
-            font-size: 2.3rem;
-            text-align: center;
-        }
-
-        a {
-            color: #29a598;
-            transition: color 0.2s ease-in-out;
-        }
-
-        a:hover {
-            color: #208479;
-        }
-
-        @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .menu-button {
-                display: block;
-            }
-
-            .hideOnMobile {
-                display: none;
-            }
-
-            .profile-photo {
-                width: 60%;  
-                margin: 0 auto;
-            }
-
-            .myphoto {
-                width: 50%;
-                margin: 0 auto;
-            }
-
-            .tab-btn {
-                font-size: 20px;
-            }
-
-            .content-container {
-                display: flex;
-                flex-direction: column; 
-                gap: 20px;
-            }
-
-            .content-section {
-                flex: 1;
-                width: 100%;  
-                padding: 10px;  
-                border: 1px solid #ccc; 
-                border-radius: 5px; 
-                background-color: #f9f9f9;  
-            }
-
-            .sidebar {
-                display: none;
-            }
-        }
-
-        #contact {
-            padding: 50px 20px;
-            background-color: #ffbc4b;
-        }
-
-        #contact h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .form-container {
-            max-width: 600px;
+            width: 60%;  
             margin: 0 auto;
         }
 
-        form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+        .myphoto {
+            width: 50%;
+            margin: 0 auto;
         }
 
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
+        .tab-btn {
+            font-size: 20px;
         }
 
-            input::placeholder, textarea::placeholder {
-                color: #888;
-            }
-
-            .td-Messagebtn {
-            background-color: #29a598;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
+        .content-container {
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;
         }
 
-        .td-Messagebtn:hover {
-            background-color: #9251c8;
+        .content-section {
+            flex: 1;
+            width: 100%;  
+            padding: 10px;  
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            background-color: #f9f9f9;  
         }
 
-        .message{
-            display: none; 
-            color: green; 
-            font-weight: bold; 
-            margin-top: 10px;
+        .sidebar {
+            display: none;
         }
-    </style>
+    }
 
-    <Script>
+    #contact {
+        padding: 50px 20px;
+        background-color: #ffbc4b;
+    }
 
+    #contact h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+        input::placeholder, textarea::placeholder {
+            color: #888;
+        }
+
+    button {
+        background-color: #a45deb;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #9251c8;
+    }
+
+.message{
+    display: none; 
+    color: green; 
+    font-weight: bold; 
+    margin-top: 10px;
+}
+
+.chatbot-window {
+    display: none;      
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px; /* Default width */
+    max-width: 90vw; /* Ensure it does not exceed 90% of viewport width */
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+}
+
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.edit-text {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        font-size: 1rem;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chatbot-messages {
+    
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background-color: #807474;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    color: red;
+}
+
+.bot-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #eee;
+    align-self: flex-end;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.chatbot-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.chatbot-icon:hover {
+    background-color: #9251c8;
+}
+
+/* Add transition for icon change */
+.edit-icon {
+    display: none;
+    position: absolute;
+    bottom: 60px; /* Position it above the icon */
+    right: 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.chatbot-icon:hover .edit-icon {
+    display: inline;
+}
+
+.chatbot-icon:hover .default-icon {
+    display: none;
+}
+</style>
+
+<Script>
+
+    
+    function showsidebar(){
+
+        const sidebar = document.querySelector('.sidebar')
+
+        sidebar.style.display = 'flex'
         
-        function showsidebar(){
+    }
 
-            const sidebar = document.querySelector('.sidebar')
+    function hidesidebar(){
 
-            sidebar.style.display = 'flex'
+        const sidebar = document.querySelector('.sidebar')
+        
+        sidebar.style.display = 'none'
+        
+    }
+
+    function hideSidebarOnLinkClick() {
+
+        const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+        sidebarLinks.forEach(link => {
             
-        }
-
-        function hidesidebar(){
-
-            const sidebar = document.querySelector('.sidebar')
-            
-            sidebar.style.display = 'none'
-            
-        }
-
-        function hideSidebarOnLinkClick() {
-
-            const sidebarLinks = document.querySelectorAll('.sidebar a');
-
-            sidebarLinks.forEach(link => {
-                
-                link.addEventListener('click', () => {
-
-                    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-                    
-                    if (viewportWidth < 768) {
-
-                        hidesidebar();
-
-                    }
-                });
-            });
-        }
-
-
-        document.addEventListener('DOMContentLoaded', hideSidebarOnLinkClick);
-
-        function checkScreenWidth() {
-
-            window.addEventListener('resize', () => {
+            link.addEventListener('click', () => {
 
                 const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-                if (viewportWidth >= 400) {
+                
+                if (viewportWidth < 768) {
 
                     hidesidebar();
 
                 }
-
             });
-        }
+        });
+    }
+
+
+    document.addEventListener('DOMContentLoaded', hideSidebarOnLinkClick);
+
+    function checkScreenWidth() {
+
+        window.addEventListener('resize', () => {
+
+            const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+            if (viewportWidth >= 400) {
+
+                hidesidebar();
+
+            }
+
+        });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+
+        hideSidebarOnLinkClick();
+
+        checkScreenWidth();
+
+    });
+
         document.addEventListener('DOMContentLoaded', () => {
-
-            hideSidebarOnLinkClick();
-
-            checkScreenWidth();
-
-        });
-
-            document.addEventListener('DOMContentLoaded', () => {
-                
-            showSection('skills');
-
-        });
-
-        function activateTab(button, tabId) {
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => section.classList.remove('active'));
-
-            const selectedSection = document.getElementById(tabId);
-            selectedSection.classList.add('active');
-
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            button.classList.add('active');
-        }
-
-        function validateForm() {
-
-        const email = document.getElementById("email").value;
-
-        const subject = document.getElementById("subject").value;
-
-        const message = document.getElementById("message").value;
-
-        
-        if (email !== "" && subject !== "" && message !== "") {
-
-            const successMessage = document.getElementById("successMessage");
-
-            successMessage.style.display = "block";
-
-            setTimeout(() => {
-
-                successMessage.style.display = "none";
-
-            }, 2000);
-
-            document.getElementById("contactForm").reset();
-
-            return false; 
-
-        } else {
             
-            alert("Please fill in all fields.");
+        showSection('skills');
 
-            return false; 
+    });
+
+    function activateTab(button, tabId) {
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => section.classList.remove('active'));
+
+        const selectedSection = document.getElementById(tabId);
+        selectedSection.classList.add('active');
+
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        button.classList.add('active');
+    }
+
+    function validateForm() {
+
+    const email = document.getElementById("email").value;
+
+    const subject = document.getElementById("subject").value;
+
+    const message = document.getElementById("message").value;
+
+    
+    if (email !== "" && subject !== "" && message !== "") {
+
+        const successMessage = document.getElementById("successMessage");
+
+        successMessage.style.display = "block";
+
+        setTimeout(() => {
+
+            successMessage.style.display = "none";
+
+        }, 2000);
+
+        document.getElementById("contactForm").reset();
+
+        return false; 
+
+    } else {
+        
+        alert("Please fill in all fields.");
+
+        return false; 
+    }
+}
+let editTextElement;
+
+function changeIcon(isHover) { 
+    const icon = document.getElementById('chatbotIcon');
+    if (isHover) {
+        icon.classList.remove('fa-comments');
+        icon.classList.add('fa-pen-to-square');
+        editTextElement = document.createElement('div');
+        editTextElement.classList.add('edit-icon');
+        editTextElement.textContent = 'Click to chat!';
+        document.body.appendChild(editTextElement);
+    } else {
+        icon.classList.remove('fa-pen-to-square');
+        icon.classList.add('fa-comments');
+        
+        if (editTextElement) {
+            document.body.removeChild(editTextElement);
+            
         }
     }
-    </Script>
+}
+
+function toggleChatbot() {
+    const chatbotWindow = document.getElementById('chatbotWindow');
+    chatbotWindow.style.display = chatbotWindow.style.display === 'block' ? 'none' : 'block';
+}
+
+function sendMessage(event) {
+    if (event.type === 'keypress' && event.key !== 'Enter') return;
+
+    const userInput = document.getElementById('userInput');
+    const chatMessages = document.getElementById('chatMessages');
+
+    if (userInput.value.trim()) {
+        const userMessage = document.createElement('div');
+        userMessage.classList.add('message', 'user-message');
+        userMessage.textContent = userInput.value;
+        chatMessages.appendChild(userMessage);
+        
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('message', 'bot-message');
+        botMessage.textContent = "Hello! How can I assist you today?";
+        chatMessages.appendChild(botMessage);
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        userInput.value = '';
+    }
+}
+
+document.getElementById('backgroundColorPicker').addEventListener('input', function(event) {
+    document.body.style.backgroundColor = event.target.value;
+    document.getElementById('chatbotWindow').style.backgroundColor = event.target.value; // Change the chatbot window background color
+});
+</Script>
