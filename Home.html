@@ -233,7 +233,7 @@
     <div class="chatbot-icon" onmouseover="changeIcon(true)" onmouseout="changeIcon(false)" onclick="toggleChatbot()">
         <i class="fas fa-comments" id="chatbotIcon"></i>
     </div>
-   
+    <div class="edit-text" id="hoverText" style="display: none;">Click to chat!</div>
     <div class="chatbot-window" id="chatbotWindow">
         <div class="chatbot-header">
             <h4>Chat with Simphiwe's Assistant</h4>
@@ -738,8 +738,8 @@
     position: fixed;
     bottom: 80px;
     right: 20px;
-    width: 300px; /* Default width */
-    max-width: 90vw; /* Ensure it does not exceed 90% of viewport width */
+    width: 300px;
+    max-width: 90vw;
     height: 400px;
     background-color: white;
     border-radius: 10px;
@@ -767,15 +767,16 @@
 }
 
 .edit-text {
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        font-size: 1rem;
-        background-color: #fff;
-        padding: 5px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+    position: fixed;
+    bottom: 90px; 
+    right: 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; 
+}
 
 .chatbot-header {
     background-color: #007bff;
@@ -797,11 +798,10 @@
 }
 
 .chatbot-messages {
-    
-    padding: 10px;
-    height: 200px;
+    height: 300px;
     overflow-y: auto;
-    background-color: #807474;
+    padding: 10px;
+    background-color: #f1f1f1;
 }
 
 .message {
@@ -853,11 +853,11 @@
     background-color: #9251c8;
 }
 
-/* Add transition for icon change */
+
 .edit-icon {
     display: none;
     position: absolute;
-    bottom: 60px; /* Position it above the icon */
+    bottom: 60px;
     right: 20px;
     font-size: 1rem;
     background-color: #fff;
@@ -992,29 +992,36 @@
 }
 let editTextElement;
 
-function changeIcon(isHover) { 
+function changeIcon(isHover) {
     const icon = document.getElementById('chatbotIcon');
+    const hoverText = document.getElementById('hoverText');
     if (isHover) {
-        icon.classList.remove('fa-comments');
-        icon.classList.add('fa-pen-to-square');
-        editTextElement = document.createElement('div');
-        editTextElement.classList.add('edit-icon');
-        editTextElement.textContent = 'Click to chat!';
-        document.body.appendChild(editTextElement);
+        icon.classList.replace('fa-comments', 'fa-pen-to-square');
+        hoverText.style.display = 'block';
     } else {
-        icon.classList.remove('fa-pen-to-square');
-        icon.classList.add('fa-comments');
-        
-        if (editTextElement) {
-            document.body.removeChild(editTextElement);
-            
-        }
+        icon.classList.replace('fa-pen-to-square', 'fa-comments');
+        hoverText.style.display = 'none';
     }
 }
 
+function changeIcons(showText) {
+    const hoverText = document.getElementById("hoverText");
+    if (showText) {
+        hoverText.style.display = "block"; 
+    } else {
+        changeIcon(showText);
+        hoverText.style.display = "none"; 
+    }
+}
+
+
 function toggleChatbot() {
-    const chatbotWindow = document.getElementById('chatbotWindow');
-    chatbotWindow.style.display = chatbotWindow.style.display === 'block' ? 'none' : 'block';
+    const chatbotWindow = document.getElementById("chatbotWindow");
+    if (chatbotWindow.style.display === "none" || chatbotWindow.style.display === "") {
+        chatbotWindow.style.display = "flex"; 
+    } else {
+        chatbotWindow.style.display = "none"; 
+    }
 }
 
 function sendMessage(event) {
@@ -1038,9 +1045,4 @@ function sendMessage(event) {
         userInput.value = '';
     }
 }
-
-document.getElementById('backgroundColorPicker').addEventListener('input', function(event) {
-    document.body.style.backgroundColor = event.target.value;
-    document.getElementById('chatbotWindow').style.backgroundColor = event.target.value; // Change the chatbot window background color
-});
 </Script>
